@@ -1,0 +1,41 @@
+.navbar {
+    overflow: hidden;
+    background-color: #df3535;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Estilos para o formulário */
+.container {
+    text-align: center;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #df3535;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
