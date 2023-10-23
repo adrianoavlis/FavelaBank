@@ -4,9 +4,17 @@
         <servlet-name>ContaServlet</servlet-name>
         <servlet-class>controller.ContaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DashBoardController</servlet-name>
+        <servlet-class>controller.DashBoardController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ContaServlet</servlet-name>
         <url-pattern>/ContaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashBoardController</servlet-name>
+        <url-pattern>/DashBoardController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
