@@ -1,102 +1,93 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Sistema Bancário</title>
-        <link rel="stylesheet" href="style/bootstrap.css">
-        <link href="style/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Navbar responsiva do Bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-ligth bg-ligth">
-            <div class="container">
-                <a class="navbar-brand text-center ms-2" href="index.html">
-            <img src="https://banco.bradesco/assets/prime/img/home/moeda-estrangeira.png" width="50px">
-        </a>    
-                <a class="navbar-brand" href="index.html">Sistema Bancário</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="saque.html">Saque</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="transferencia.html">Transferência de Saldo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cadastro.html">Cadastro de Correntista</a>
-                        </li>
-                    </ul>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favela Bank</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand text-center ms-2" href="index.html">
+                <img src="https://media.discordapp.net/attachments/963533169708134463/1166479547840090203/OIG.51t5Dx_P0SKgz-removebg-preview.png"
+                    width="50px">
+            </a>
+            <a class="navbar-brand" href="#sobre">FavelaBank!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="saque.html">Saque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="transferencia.html">Transferência de Saldo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro de Correntista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 bg-light p-5">
+                <img src="https://media.discordapp.net/attachments/963533169708134463/1166426317890261072/OIG.png" alt="Imagem do Banco" class="img-fluid">
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="w-75 text-center">
+                    <img src="https://media.discordapp.net/attachments/963533169708134463/1166479547840090203/OIG.51t5Dx_P0SKgz-removebg-preview.png" alt="Sua Descrição" class="img-fluid mb-3">
+                    <h2>Login</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="Insira o CPF">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Insira a senha">
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-block">Entrar</button>
+                    </form>
                 </div>
             </div>
-        </nav>
-
-        
-        
-        <!-- Conteúdo principal da página -->
-        
-<div class="container">
-    <div class="row">
-        <!-- into Rocinha -->
-        <div class="col">
-            <h1>O Banco</h1>
-            <br><br>
-
-                Bem-vindo ao FavelaBank, um inovador banco comunitário que está transformando a forma como as 
-                comunidades de baixa renda lidam com suas finanças. Com um compromisso dedicado a promover a inclusão 
-                financeira e empoderar indivíduos em favelas e áreas desfavorecidas, o FavelaBank está redefinindo o significado 
-                de bancos tradicionais. Nossa missão é criar oportunidades financeiras acessíveis, fomentar o crescimento econômico 
-                local e capacitar os residentes de favelas a construir um futuro financeiro mais brilhante. Descubra como o 
-                FavelaBank está se tornando um catalisador de mudanças positivas nas comunidades que atendemos e saiba como você
-                pode fazer parte dessa transformação. Junte-se a nós enquanto exploramos as possibilidades de um amanhã financeiro 
-                mais igualitário e próspero.
-                </p>
         </div>
-
-        <!-- carousel -->
-        <div class="col">
-            <div id="carouselSlide" class="carousel slide d-none d-md-block carousel-fade mb-4" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
-                    <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="1" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselSlide" data-bs-slide-to="2" aria-label="Slide 2"></button>
-                </div>
-                <div class="carousel-inner" id="imgsCarousel">
-                    <div class="carousel-item active">
-                        <img src="https://seucreditodigital.com.br/wp-content/uploads/2023/02/saque-em-caixa-eletronico.jpg" class="d-block w-100" style="height: 350px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://img.freepik.com/vetores-gratis/trabalhadores-do-banco-que-prestam-servicos-aos-clientes_74855-4365.jpg" class="d-block w-100" style="height: 350px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://brasileirosporbuenosaires.com.br/wp-content/uploads/2016/12/2034257815_2596967c12_o-copy-compressor.jpg" class="d-block w-100" style="height: 350px;">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlide" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselSlide" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            
-        </div>
-
     </div>
-</div>
+    
 
+    <div id="sobre" class=" p-4 mx-auto w-50 text-center">
+        <h2>Sobre o Banco</h2>
+        <img src="https://emprestimosim.com.br/wp-content/uploads/2021/04/Blog_imagem_2-3-1024x681.jpg"
+            alt="Imagem Sobre" class="img-fluid">
+        <p>
+            Bem-vindo ao FavelaBank, um inovador banco comunitário que está transformando a forma como as
+            comunidades de baixa renda lidam com suas finanças. Com um compromisso dedicado a promover a inclusão
+            financeira e empoderar indivíduos em favelas e áreas desfavorecidas, o FavelaBank está redefinindo o
+            significado
+            de bancos tradicionais. Nossa missão é criar oportunidades financeiras acessíveis, fomentar o crescimento
+            econômico
+            local e capacitar os residentes de favelas a construir um futuro financeiro mais brilhante. Descubra como o
+            FavelaBank está se tornando um catalisador de mudanças positivas nas comunidades que atendemos e saiba como
+            você
+            pode fazer parte dessa transformação. Junte-se a nós enquanto exploramos as possibilidades de um amanhã
+            financeiro
+            mais igualitário e próspero.
+        </p>
 
-        <!-- Footer fixo -->
-        <div class="footer fixed-bottom" >
-            &copy; 2023 Sistema Bancário
-        </div>
+        <a href="cadastro.html" class="btn btn-primary">Abra já a sua conta</a>
+    </div>
 
-        <!-- Scripts do Bootstrap (JavaScript) -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    </body>
+</body>
+
 </html>
