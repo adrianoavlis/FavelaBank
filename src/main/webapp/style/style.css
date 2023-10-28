@@ -10,6 +10,25 @@ html {
     background-color: var(--bs-btn-bg);
 }
 
+.btn-secondary {
+    background-color: var(--bs-white);
+    color: var(--bs-btn-border-width);
+}
+
+.cadastro_entrar {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.cadastro_entrar > .btn-primary ~ .btn-secondary {
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cadastro_entrar > .btn-secondary {
+    margin-right: auto;
+}
+
 .col {
     display: flex;
     flex-wrap: wrap;
