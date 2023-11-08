@@ -1,4 +1,4 @@
-package model;
+package aplicacao;
 
 public class Usuario {
 
@@ -8,6 +8,7 @@ public class Usuario {
     private String cpf;
     private String senha;
     private String telefone;
+    private boolean adm =false;
 
     public Usuario(int id_user, String nome, String email, String cpf, String senha, String telefone) {
         this.id = id_user;
@@ -16,6 +17,7 @@ public class Usuario {
         this.cpf = cpf;
         this.senha = senha;
         this.telefone = telefone;
+        this.adm = false;
     }
 
     public Usuario(){}
@@ -68,7 +70,15 @@ public class Usuario {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    
+    public boolean isAdm(){
+    return this.adm;
+    }
 
+    public void setAdm(boolean adm){
+    this.adm = adm;
+    }
+    
     @Override
     public String toString() {
         return "User{" +

@@ -1,6 +1,6 @@
 package controller;
 
-import model.Usuario;
+import aplicacao.Usuario;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

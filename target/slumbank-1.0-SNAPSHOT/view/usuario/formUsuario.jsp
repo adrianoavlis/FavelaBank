@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="model.Usuario"%>
+<%@page import="aplicação.Usuario"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="container">
-            <jsp:include page="/../webapp/menu.jsp" />
+            <jsp:include page="/../webapp/building/menu.jsp" />
             <div class="row mt-5">
                 <div class="col-sm-4 offset-3">
                     <%
@@ -58,7 +58,7 @@
                             <input type="text" name="senha" <%= acao.equals("Excluir") ? "Readonly" : ""%> value="<%=usuario.getSenha()%>" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="telefone" class="form-label" ></label>
+                            <label for="telefone" class="form-label" >Telefone</label>
                             <input type="text" name="telefone" <%= acao.equals("Excluir") ? "Readonly" : ""%> value="<%=usuario.getTelefone()%>" class="form-control">
                         </div>
                         <div>

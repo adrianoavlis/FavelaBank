@@ -8,10 +8,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+public class CorrentistaControllet extends HttpServlet {
 
-public class ContaServlet extends HttpServlet {
-
- 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -20,10 +27,10 @@ public class ContaServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ContaServlet</title>");            
+            out.println("<title>Servlet CorrentistaControllet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ContaServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CorrentistaControllet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

@@ -1,6 +1,6 @@
 package controller;
 
-import model.Usuario;
+import aplicacao.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
