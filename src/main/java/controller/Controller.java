@@ -16,7 +16,7 @@ import model.DAO;
 import model.Correntista;
 import model.Transacao;
 
-@WebServlet(urlPatterns = {"/Controller", "/main", "/insert", "/select", "/update", "/delete"})
+@WebServlet(urlPatterns = {"/Controller", "/mainAdm","/mainUser", "/insert", "/select", "/update", "/delete"})
 public class Controller extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
