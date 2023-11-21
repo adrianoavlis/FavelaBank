@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +29,7 @@
                             <a class="nav-link" href="transferencia.html">Transferência de Saldo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cadastro.html">Cadastro de Correntista</a>
+                            <a class="nav-link" href="cadastro.html">Ediatr de Conta</a>
                         </li>
                     </ul>
                 </div>
@@ -37,44 +39,29 @@
 
 
         <div class="container">
-            <h1 class="text-center">Cadastro de Correntista</h1>
-            <form name="frmConta" action="insert">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <!-- Campo para o nome do correntista -->
-                        <div class="form-group mt-3">
-                            <label for="nome">Nome:</label>
-                            <input type="text" class="form-control" id="nome" name="nome" required>
-                        </div>
-
-                        <!-- Campo para o e-mail do correntista -->
-                        <div class="form-group mt-3">
-                            <label for="email">E-mail:</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-
-                        <!-- Campo para o CPF do correntista -->
-                        <div class="form-group mt-3">
-                            <label for="cpf">CPF:</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" required>
-                        </div>
-
-                        <!-- Campo para a senha do correntista -->
-                        <div class="form-group mt-3">
-                            <label for="senha">Senha:</label>
-                            <input type="password" class="form-control" id="senha" name="senha" required>
-                        </div>
-
-                        <!-- Campo para o telefone do correntista -->
-                        <div class="form-group mt-3">
-                            <label for="telefone">Telefone:</label>
-                            <input type="tel" class="form-control" id="telefone" name="telefone">
-                        </div>
-                        <!-- Botão de envio do formulário -->
-
-                    </div>
-                </div>
-                <input type="button" onclick="validar()" class="btn btn-primary mt-3"  value="Cadastrar">
+            <h1 class="text-center">Editar Contato</h1>
+            <form name="frmContato" action="update">
+                <table>
+                    <tr>
+                        <td><input type="text" name="idcon" id="caixa3" readonly value="<%out.print(request.getAttribute("id"));%>"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="nome" value="<%out.print(request.getAttribute("nome"));%>"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" value="<%out.print(request.getAttribute("email"));%>"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="cpf" class="caixa1" value="<%out.print(request.getAttribute("cpf"));%>"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="senha"  value="<%out.print(request.getAttribute("senha"));%>"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="telefone" value="<%out.print(request.getAttribute("telefone"));%>"></td>
+                    </tr>
+                </table>
+                <input type="button" class="botao1" onclick="validar()" value="Salvar">
             </form>
         </div>
 

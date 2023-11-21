@@ -1,20 +1,19 @@
-package aplicacao;
+package model;
 
+import java.sql.Date;
+import model.Usuario;
 import java.util.ArrayList;
 
 public class Correntista {
 
     private Usuario usuario;
     private double saldo;
-    private ArrayList<Double> transacoes;
+    private ArrayList<Transacao> transacoes;
 
     public Correntista() {
-    }
-
-    public Correntista(Usuario usuario, double saldo) {
-        this.usuario = usuario;
+        this.usuario = new Usuario();
         this.saldo = saldo;
-        this.transacoes = new ArrayList();
+        this.transacoes = new ArrayList<Transacao>();
     }
 
     public Usuario getUsuario() {
@@ -40,21 +39,24 @@ public class Correntista {
     public void sacar(double valor) {
         if (saldo >= valor) {
             saldo -= valor;
-            setTransacoes(saldo);
+            Transacao transasao = new Transacao();
+            transasao.setTipo("Débito");
+            transasao.setValor(valor);
+            transasao.setSaldo(saldo);
+            this.transacoes.add(transasao);
         } else {
             System.out.println("Saldo insuficiente.");
         }
     }
-    
-    public ArrayList <Double> getTransacoes(){
-    return this.transacoes;
+
+    public ArrayList<Transacao> getTransacoes() {
+        return this.transacoes;
     }
-    
-    public void setTransacoes(double valor ){
-        this.transacoes.add(valor);
+
+    public void setTransacoes(Transacao transacao) {
+        this.transacoes.add(transacao);
     }
-    
-            
+
     @Override
     public String toString() {
         return "Correntista [usuario=" + usuario + ", saldo=" + saldo + "]";

@@ -1,28 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>DashBoardController</servlet-name>
-        <servlet-class>controller.DashBoardController</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>UsuarioController</servlet-name>
-        <servlet-class>controller.UsuarioController</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>CorrentistaControllet</servlet-name>
-        <servlet-class>controller.CorrentistaControllet</servlet-class>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>controller.Controller</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DashBoardController</servlet-name>
-        <url-pattern>/DashBoardController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UsuarioController</servlet-name>
-        <url-pattern>/UsuarioController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CorrentistaControllet</servlet-name>
-        <url-pattern>/CorrentistaControllet</url-pattern>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

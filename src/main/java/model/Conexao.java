@@ -1,33 +1,33 @@
 package model;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class Conexao {
-    /* Banco de dados: `dbjava` */
-    private Connection conexao;
+	Connection con = null;
 
-    public Conexao() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver"); //load driver  
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbjava", "root", "");
-        } catch (SQLException e) {
-            throw new RuntimeException("Nao foi possivel efetuar uma conexao com o BD!");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Nao foi possivel encontrar a classe referente! Verifique o driver!");
-        }
-    }
+	public Connection conectar() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection( "jdbc:mysql://127.0.0.1:3306/dbagenda?useTimezone=true&serverTimezone=UTC", "root", "admin");
+			return con;
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
 
-    public Connection getConexao() {
-        return this.conexao;
-    }
-
-    public void closeConexao() {
-        try {
-            this.conexao.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+	public Connection getConnection() {
+		return this.con;
+	}
+	
+	public void closeConnection() {
+		try {
+			this.con.close();
+		} catch (Exception e) {
+			 e.printStackTrace();
+		}
+		
+	}
+	
 }
