@@ -36,4 +36,4 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -i ${{ secrets.SSH_KEY }} ubuntu@YOUR_EC2_IP "cd /path/to/your/app && git pull origin main && npm install && pm2 restart server.js"
+          ssh -i ${{ secrets.SSH_KEY }} ubuntu@34.228.23.89 "cd tmaior-test-iriscafe/ && git pull origin main && npm install && pm2 restart server.js"
